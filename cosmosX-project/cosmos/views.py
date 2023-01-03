@@ -11,7 +11,7 @@ def home(request):
 
 def news(request):
     all_news = News.objects.all()
-    paginator = Paginator(all_news,3)
+    paginator = Paginator(all_news, 3)
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -28,5 +28,5 @@ def gallery(request):
 
 
 def detail(request, news_id):
-    blog = get_object_or_404(News, pk=news_id)
+    news = get_object_or_404(News, pk=news_id)
     return render(request, 'cosmos/html/detail.html', {'news': news})

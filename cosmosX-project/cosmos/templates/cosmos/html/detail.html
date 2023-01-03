@@ -1,0 +1,86 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CosmosX</title>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/detail.css" %}">
+</head>
+<body>
+    <nav>
+        <div class="container nav_container">
+            <a href="{% url 'home' %}" class="nav_menu logo">
+                <img src="{% static 'images/logo.png' %}" alt="logo">
+                <h4 class="site_name">COSMOSX</h4>
+            </a>
+            <ul class="nav_menu">
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{{ 'news' }}">Новости</a></li>
+                <li><a href="{{ 'gallery' }}">Галерея</a></li>
+                <li><a href="{{ 'team' }}">Наша команда</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+
+    <section class="open_news_section">
+        <div class="head">
+            <div class="news_image">
+                <img src="{{ news.image.url }}" alt="" tabindex="0">
+                <div></div>
+            </div>
+            <h2>{{ news.title }}</h2>
+            <h3>{{ news.date }}</h3>
+        </div>
+        <div class="desc">
+            <p>{{ news.description }}</p>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="section_footer">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Информация</h2>
+                <h3 class="section_subtitle">ДАННЫЙ САЙТ НЕСЕТ ИНФОРМАТИВНУЮ ФУНКЦИЮ И НЕ ЯВЛЯЕТСЯ ПЕРВОНАЧАЛЬНЫМ ИСТОЧНИКОМ! ОДНАКО ВЫ МОЖЕТЕ ОЗНАКОМИТЬСЯ С РАЗДЕЛАМИ САЙТА И УЗНАТЬ НОВУЮ ИНФОРМАЦИЮ О ПОСЛЕДНИХ ТЕХНОЛОГИЯХ КОМПАНИИ ЛОЛ!</h3>
+                <div class="social-media">
+                   <div class="social_content">
+                        <a href="https://www.instagram.com/spacex/" target="_blank" class="social_item">
+                            <img class="social_img" src="{% static 'images/inst.png' %}" alt="insta">
+                            <h4 class="social_name">insta: ilonmaskal</h4>
+                        </a>
+                   </div>
+                    <div class="social_content">
+                        <a href="https://telegram.me/SpaceX" target="_blank" class="social_item">
+                            <img class="social_img" src="{% static 'images/telephone.png' %}" alt="insta">
+                            <h4 class="social_name">8805553535</h4>
+                        </a>
+                   </div>
+                    <div class="social_content">
+                        <a href="https://twitter.com/SpaceX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="social_item">
+                            <img class="social_img" src="{% static 'images/twitter.png' %}" alt="insta">
+                            <h4 class="social_name">tw: ilonochka</h4>
+                        </a>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>

@@ -17,7 +17,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
-    color: white;
+    color: black;
     background: white;
 }
 
@@ -55,7 +55,7 @@ h4{
 }
 
 a{
-    color: white;
+    color: black;
 }
 .site_name{
     color: #696969;

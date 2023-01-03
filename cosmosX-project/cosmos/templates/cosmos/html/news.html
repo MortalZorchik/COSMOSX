@@ -44,8 +44,7 @@
 
 
     <section class="section_posts">
-
-    {% for new in all_news %}
+    {% for new in page_obj %}
         <div class="post_content">
         <div class="post_image"><img src="{{ new.image.url }}" alt="image"></div>
 
@@ -63,8 +62,36 @@
 
 </section>
 
-    
-    
+    {% if page_obj.has_other_pages %}
+    <div class="nav_pagination">
+        <ul class="nav_pagination_menu">
+
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">
+                    <li class="page_num">&lt;</li>
+                </a>
+            {% endif %}
+
+            {% for p in page_obj.paginator.page_range %}
+                {% if page_obj.number == p %}
+                <li class="page_num page_num-selected">{{ p }}</li>
+                {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+                <a href="?page={{ p }}">
+                <li class="page_num">{{ p }}</li>
+                </a>
+                {% endif %}
+            {% endfor %}
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">
+                <li class="page_num">&gt;</li>
+            </a>
+        {% endif %}
+
+        </ul>
+
+    </div>
+    {% endif %}
     
     
     

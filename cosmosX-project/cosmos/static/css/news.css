@@ -35,8 +35,8 @@
     font-weight: 600;
 }
 .post_description{
-
-    color: #797979;
+    font-size: 20px;
+    color: #c8c8bd;
 }
 .post_image img{
     width: 100%;
@@ -73,8 +73,8 @@
 	box-shadow: 2px 2px 1px #d0d0d0;
 }
 .page_num-selected {
-	border: none;
-	color: #000;
+    border-color: #e84c3d;
+	color: #e84c3d;
 	font-size: 20px;
 }
 .page_num-selected:hover {

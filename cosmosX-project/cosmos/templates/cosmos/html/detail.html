@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="{% static "css/detail.css" %}">
 </head>
 <body>
+
+
+<div id="particles-js"></div>
+    <script src="{% static 'anim-bg/particles.min.js' %}"></script>
+    <script src="{% static 'anim-bg/app.js' %}"></script>
+
+
+
     <nav>
         <div class="container nav_container">
             <a href="{% url 'home' %}" class="nav_menu logo">
@@ -25,7 +33,7 @@
             </a>
             <ul class="nav_menu">
                 <li><a href="{% url 'home' %}">Главная</a></li>
-                <li><a href="{{ 'news' }}">Новости</a></li>
+                <li><a href="{% url 'news' %}">Новости</a></li>
                 <li><a href="{{ 'gallery' }}">Галерея</a></li>
                 <li><a href="{{ 'team' }}">Наша команда</a></li>
             </ul>
@@ -34,14 +42,20 @@
         </div>
     </nav>
 
+
+
+
     <section class="open_news_section">
         <div class="head">
             <div class="news_image">
                 <img src="{{ news.image.url }}" alt="" tabindex="0">
+                <div class="text_block">
+                    <h2>{{ news.title }}</h2>
+                    <h3>{{ news.date }}</h3>
+                </div>
+
                 <div></div>
             </div>
-            <h2>{{ news.title }}</h2>
-            <h3>{{ news.date }}</h3>
         </div>
         <div class="desc">
             <p>{{ news.description }}</p>
@@ -66,7 +80,7 @@
                    </div>
                     <div class="social_content">
                         <a href="https://telegram.me/SpaceX" target="_blank" class="social_item">
-                            <img class="social_img" src="{% static 'images/telephone.png' %}" alt="insta">
+                            <img class="social_img" src="{% static 'images/telegram.png' %}" alt="insta">
                             <h4 class="social_name">8805553535</h4>
                         </a>
                    </div>

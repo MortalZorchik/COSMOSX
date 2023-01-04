@@ -10,3 +10,7 @@ class News(models.Model):
     image = models.ImageField(upload_to='cosmos/static/images')
     url = models.URLField(blank=True)
     date = models.DateField(default=date.today)
+
+
+class Galery(models.Model):
+    image = models.ImageField(upload_to='cosmos/static/images')

@@ -1,0 +1,94 @@
+.member_section{
+    padding-top: 70px;
+}
+.team_container{
+    margin-bottom: 100px;
+    width: 100%;
+    height: calc(100vh - 5rem );
+    /* Set a specific height */
+    min-height: 500px;
+
+  /* Create the parallax scrolling effect *//*
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;*/
+}
+.team_container img{
+    width:100%;
+    height:100%;
+    margin-top: 5rem;
+    display: block;
+    object-fit: fill;
+  /* Create the parallax scrolling effect *//*
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;*/
+}
+.content h1{
+    color: #e84c3d;
+}
+
+.team_container .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #ecece9; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+
+.member_content{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    width: var(--container-width-lg);
+    gap: 2rem;
+    /*display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 50px;*/
+}
+.member_content.right{
+    grid-template-columns: 4fr 2fr;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.member_description{
+    background-color: rgba(2, 5, 18, 0.6);
+    padding: 0.5rem;
+    border: 2px solid #e84c3d;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.member_description p strong{
+    font-size: 24px;
+    color: #e84c3d;
+}
+
+.member_img{
+    height: 60vh;
+    width: 100%;
+    position: relative;
+}
+.member_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.member_img:hover .overlay {
+  opacity: 1;
+}

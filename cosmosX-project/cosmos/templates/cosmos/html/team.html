@@ -1,0 +1,150 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CosmosX</title>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/team.css" %}">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+    <script src="{% static 'anim-bg/particles.min.js' %}"></script>
+    <script src="{% static 'anim-bg/app.js' %}"></script>
+   {% comment %} <script>/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', '{% static 'anim-bg/particles.json' %}', function() {
+  console.log('callback - particles.js config loaded');
+});</script>{% endcomment %}
+
+
+    <nav>
+        <div class="container nav_container">
+            <a href="{% url 'home' %}" class="nav_menu logo">
+                <img src="{% static 'images/logo.png' %}" alt="logo">
+                <h4 class="site_name">COSMOSX</h4>
+            </a>
+            <ul class="nav_menu">
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{{ 'news' }}">Новости</a></li>
+                <li><a href="{{ 'gallery' }}">Галерея</a></li>
+                <li><a href="{{ 'team' }}">Наша команда</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+
+        <div class="container team_container">
+            <img src="{% static 'images/imgonline-com-ua-Resize-leFxxxz6ncK.jpg' %}" alt="">
+            <div class="content">
+                <h1>DreamTeam</h1>
+                <p>В полете не обходится дело без славного экипажа, ведь именно эти ребята берут на себя ответственность не только за поддержание работоспособности судна, но и выполняют множество различных задач. Каждый член экипажа проходил специальную подготовку длиной в 19 лет, которая включала в себя психологические и физические тренировки. Космонавты уверенны, что их работа это важнейший вклад в историю человечества и развитие науки. SpaceX помогает им на каждом этапе - начиная от подготовки к полету, заканчивая нахождением внутри космического корабля. </p>
+            </div>
+        </div>
+
+
+    <section class="member_section">
+        <div class="member_content">
+            <div class="member_img">
+                <img src="{% static 'images/Maxim.jpg' %}" alt="">
+                <div class="overlay"><h3>Максим Демьянов</h3></div>
+            </div>
+            <div class="member_description">
+                <p>
+<strong>Демьянов Максим</strong> - капитан космического корабля. Он прошел огромный путь для того чтобы воплатить свою мечту. Максим пришел на станцию совсем ребенком - в 19 лет и твердо сказал: “Блин, может стать капитаном по-приколу” - так все и вышло. Спустя долгие годы этот человек занял должность руководителя судна, с чем мы его и поздравляем.
+Одно из важнейших качеств капитана - стрессоустойчивость, она помогает сохранять трезвый ум даже в самых сложных ситуациях. Для тренировки этого качества Максим использует специальный компьютерный стратегический тренажер, в котором провел не менее пяти тысяч часов. Как любят шутить в команде - если бы по нему проводили турниры, Максим определенно занял бы второе место.
+</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="member_section">
+        <div class="member_content right">
+
+            <div class="member_description">
+                <p>Как и в жизни, дело не обходится без прекрасного пола. Каждый член экипажа понимает - если бы не <strong>Скрипниченко Анастасия</strong> - корабль бы не взлетел. Именно она занимает должность ведущего инженера, технолога, психолога, социолога и просто очень хорошего человека. Не устанем восхищаться прекрасной женщиной.
+“Я не собиралась быть космонавтом, всегда думала что это мужское дело. Однако, попробовав игры-тренажеры, я поняла, что хочу ощутить все в реальной жизни. Много сил было вложено и вот я здесь! У меня отличная команда, но иногда им нужна женская помощь”
+</p>
+            </div>
+            <div class="member_img">
+                <img src="{% static 'images/Nastya.jpg' %}" alt="">
+                <div class="overlay"><h3>Скрипниченко Анастасия</h3></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="member_section">
+        <div class="member_content">
+            <div class="member_img">
+                <img src="{% static 'images/Makar.jpg' %}" alt="">
+                <div class="overlay"><h3>Суханов Макар</h3></div>
+            </div>
+            <div class="member_description">
+                <p><strong>Суханов Макар</strong> - ведущий программист судна. Про таких как он говорят в народе - может и рыбку съесть и сайт написать. Программировать он начал с 9 лет. Тогда ему не понравилось, что в любимой игре - Kosmocraft не добавили дрифт на космических кораблях. “Ну, я сел и написал мод к этой игре” - вспоминает Макар. Когда он в 12 лет смог взломать Facebook, Илон Маск заметил его и пригласил работать у себя.
+Программисты очень важны на судне, они помогают корректировать марштуры и устранять неполадки в системном блоке корабля. Корабль работает на системе Linux и Макар знает её идеально. В том числе, именно он занимается бюджетными средствами на современой платформе 1s. </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="member_section">
+        <div class="member_content right">
+
+            <div class="member_description">
+                <p><strong>Мартынюк Андрей</strong> - Русский механик и биолог. Именно он спускается на планеты, изучает астероиды и ищет “Новую Землю”. Андрей начал увлекаться экологией в раннем детстве, когда начал выращивать гречку в саду дома. Он задумался: “А может ли вырасти греча на Марсе?” . Чтобы проверить это, он начал учиться на космонавта и начал свое исследование. К сожалению, результаты эксперемента засекречены, однако эта архивная фотография с Марса может нам дать почву для рассуждений.
+“Я встаю раньше всех на корабле и делаю силовые упражнения, а после ставлю различные эксперементы. Мне очень нравится работать на Марсе, но как и любой мужчина, я скучаю по земным женщинам” - говорит Андрей</p>
+            </div>
+            <div class="member_img">
+                <img src="{% static 'images/Andrey.jpg' %}" alt="">
+                <div class="overlay"><h3>Мартынюк Андрей</h3></div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="section_footer">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Информация</h2>
+                <h3 class="section_subtitle">ДАННЫЙ САЙТ НЕСЕТ ИНФОРМАТИВНУЮ ФУНКЦИЮ И НЕ ЯВЛЯЕТСЯ ПЕРВОНАЧАЛЬНЫМ ИСТОЧНИКОМ! ОДНАКО ВЫ МОЖЕТЕ ОЗНАКОМИТЬСЯ С РАЗДЕЛАМИ САЙТА И УЗНАТЬ НОВУЮ ИНФОРМАЦИЮ О ПОСЛЕДНИХ ТЕХНОЛОГИЯХ КОМПАНИИ ЛОЛ!</h3>
+                <div class="social-media">
+                   <div class="social_content">
+                        <a href="https://www.instagram.com/spacex/" target="_blank" class="social_item">
+                            <img class="social_img" src="{% static 'images/inst.png' %}" alt="insta">
+                            <h4 class="social_name">insta: ilonmaskal</h4>
+                        </a>
+                   </div>
+                    <div class="social_content">
+                        <a href="https://telegram.me/SpaceX" target="_blank" class="social_item">
+                            <img class="social_img" src="{% static 'images/telegram.png' %}" alt="insta">
+                            <h4 class="social_name">8805553535</h4>
+                        </a>
+                   </div>
+                    <div class="social_content">
+                        <a href="https://twitter.com/SpaceX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="social_item">
+                            <img class="social_img" src="{% static 'images/twitter.png' %}" alt="insta">
+                            <h4 class="social_name">tw: ilonochka</h4>
+                        </a>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>

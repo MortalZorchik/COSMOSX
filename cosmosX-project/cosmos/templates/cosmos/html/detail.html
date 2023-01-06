@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <link rel="stylesheet" href="{% static "css/detail.css" %}">
 </head>
 <body>
 
@@ -27,15 +26,15 @@
 
     <nav>
         <div class="container nav_container">
-            <a href="{% url 'home' %}" class="nav_menu logo">
+            <a href="{% url 'home' %}" class="logo">
                 <img src="{% static 'images/logo.png' %}" alt="logo">
                 <h4 class="site_name">COSMOSX</h4>
             </a>
             <ul class="nav_menu">
                 <li><a href="{% url 'home' %}">Главная</a></li>
                 <li><a href="{% url 'news' %}">Новости</a></li>
-                <li><a href="{{ 'gallery' }}">Галерея</a></li>
-                <li><a href="{{ 'team' }}">Наша команда</a></li>
+                <li><a href="{% url 'gallery' %}">Галерея</a></li>
+                <li><a href="{% url 'team' %}">Наша команда</a></li>
             </ul>
             <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
             <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
@@ -95,6 +94,6 @@
         </div>
 
     </section>
-
+<script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

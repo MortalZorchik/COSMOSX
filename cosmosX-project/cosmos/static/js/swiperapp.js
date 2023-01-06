@@ -6,12 +6,29 @@ const sliderMain = new Swiper('.slider_main', {
 	parallax: true,
 	breakpoints: {
 		0: {
-			slidesPerView: 2.5,
+			slidesPerView: 1.1,
 			spaceBetween: 20
 		},
-		680: {
-			slidesPerView: 3.5,
-			spaceBetween: 60
+
+		601: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		801:{
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		1025:{
+			slidesPerView: 2.1,
+			spaceBetween: 60,
+		},
+		1100: {
+			slidesPerView: 2.3,
+			spaceBetween: 60,
+		},
+		1200: {
+			slidesPerView: 2.5,
+			spaceBetween: 60,
 		}
 	}
 })
@@ -31,5 +48,11 @@ document.querySelectorAll('.slider__item').forEach(item => {
 
 let desc = document.querySelector('.description')
 sliderMain.on('slideChange', e => {
-	sliderMain.activeIndex > 0 ? desc.classList.add('hidden') : desc.classList.remove('hidden')
+		if (document.documentElement.scrollWidth>="1025"){
+			sliderMain.activeIndex > 0 ? desc.classList.add('hidden') : desc.classList.remove('hidden')
+		}
+		if(document.documentElement.scrollWidth<="1025" && desc.classList.contains('hidden')){
+			desc.classList.remove('hidden')
+		}
+
 })

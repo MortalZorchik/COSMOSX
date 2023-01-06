@@ -24,8 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('news', views.news, name='news'),
-    path('team', views.team),
-    path('gallery', views.gallery),
+    path('team', views.team, name='team'),
+    path('gallery', views.gallery, name='gallery'),
     path('<int:news_id>/', views.detail, name='detail'),
 ]
 

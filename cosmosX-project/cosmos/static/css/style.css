@@ -495,6 +495,7 @@ section{
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 600;
+    color: #e84c3d;
 }
 .post_description{
     font-size: 20px;
@@ -519,7 +520,7 @@ section{
 .nav_pagination_menu{
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     font-size: 20px;
 
 }
@@ -753,10 +754,21 @@ section{
     background: rgba(7, 12, 34, 0.7); /* Black background with 0.5 opacity */
     color: #f1f1f1; /* Grey text */
     width: 100%; /* Full width */
+    height: 50%;
     padding: 20px; /* Some padding */
 }
+
+.text_block h2{
+    margin-bottom: 0;
+    font-size: calc(var(--sizeindex)*1);
+
+}
 .text_block h3{
+
+    position: absolute;
+    bottom: 0px;
     color: #c8c8bd;
+    font-size: calc(var(--sizeindex)*1);
 }
 
 
@@ -866,7 +878,7 @@ section{
     /*gallery*/
     .description{
         left: 5%;
-        top: 5rem;
+        top: 6rem;
         position: relative;
         max-width: 90%;
 
@@ -879,7 +891,7 @@ section{
     }
     .description {
 	    font-size: calc(var(--sizeindex)*1.25);
-}
+    }
     .galery_logo {
 	    font-size: calc(var(--sizeindex)*2.5);
     }
@@ -902,6 +914,10 @@ section{
     .member_description{
     font-size: calc(var(--sizeindex)*0.85);
 }
+
+
+
+
     .member_description p strong{
     font-size: calc(var(--sizeindex)*1);
     }
@@ -912,6 +928,9 @@ section{
 
     .text_block h2{
         margin-bottom: 1rem;
+    }
+    .slider_main{
+    left: 5vw;
     }
 
 }
@@ -965,6 +984,14 @@ section{
 /*team*/
     .team_container{
         width: 100%;
+        margin-bottom: 0;
+    }
+    .content{
+        height: 50vh;
+    }
+
+    .team_container img{
+        height: calc(50vh - 5rem);
     }
     .member_section{
         padding-bottom: 20px;
@@ -992,14 +1019,30 @@ section{
     .member_description{
     font-size: calc(var(--sizeindex)*1.25);
 }
+
+
+
+
     .member_description p strong{
     font-size: calc(var(--sizeindex)*1.4);
     }
     .content p{
         font-size: calc(var(--sizeindex)*1.2);
     }
+    .content h1{
+        font-size: calc(var(--sizeindex)*1.7);
+    }
 
-
-
-
+.member_description{
+    height: auto;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.member_description p{
+    background-color: rgba(2, 5, 18, 0.6);
+    padding: 0.5rem;
+    border: 2px solid #e84c3d;
+    border-radius: 10px;
+    }
 }

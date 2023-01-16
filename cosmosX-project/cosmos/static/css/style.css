@@ -269,7 +269,7 @@ section{
 .about_item img {
   display: block;
   position: relative;
-  height: 300px;
+  height: 40vh;
   -webkit-transform: scaleY(1);
   -moz-transform: scaleY(1);
   -ms-transform: scaleY(1);
@@ -304,7 +304,7 @@ section{
   border-bottom: 1px solid #d5d5d5;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1em;
+  font-size: calc(var(--sizeindex)*0.95);
   font-weight: 700;
   color: white;
   -webkit-transform: scale(0);
@@ -324,7 +324,7 @@ section{
 
 .about_item .about_content p {
   padding: 10px;
-  font-size: 1em;
+  font-size: calc(var(--sizeindex)*0.85);
   line-height: 1.2;
   font-weight: normal;
   text-align: center;
@@ -363,8 +363,8 @@ section{
 .about_item .about_content_image{
 
     width: auto;
-    height: auto;
-    margin: 30px auto 0;
+    height: 30%;
+    margin: 25px auto 0;
 }
 .about_item:hover img,
 .about_item:hover h3,
@@ -397,18 +397,20 @@ section{
 }
 
 .launch_section_left{
+    display: table;
     text-align: center;
     background-color: #172126;
-    height: 70vh;
 }
 .launch_section_left .content{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
     margin: 80px auto;
     max-width: 500px;
 }
 
 .launch_section_right{
 
-    height: 70vh;
 }
 
 .launch_video{
@@ -416,8 +418,14 @@ section{
     height: 70vh;
     width: 100%;
 }
-
+.launch_section_left h2{
+    font-size: calc(var(--sizeindex) * 1.25);
+}
+.launch_section_left a{
+    font-size: calc(var(--sizeindex) * 1);
+}
 .launch_section_left p{
+    font-size: calc(var(--sizeindex) * 1);
     margin: 1rem 0 2.4rem;
 }
 
@@ -584,7 +592,7 @@ section{
 	transition: var(--transition-gallery)!important;
 	will-change: transform;
 }
-.slider__item.opened {
+/*.slider__item.opened {
 	z-index: 13;
 	transform: scale(1.15);
 	box-shadow: rgb(0 0 0 / .75) 0 0 0 10000px;
@@ -595,13 +603,14 @@ section{
     left: 0;
 	background-repeat: no-repeat;
 	background-position: center;
-}
+}*/
 
 .description {
 	position: absolute;
 	font-size: calc(var(--sizeindex)*1.05);
-	top: 25vh;
+	top: 20vh;
     left: 12%;
+    height: 70vh;
 	max-width: 25vw;
 	transition: opacity var(--transition-gallery), transform var(--transition-gallery);
 
@@ -672,18 +681,33 @@ section{
     width: 100%; /* Full width */
     padding: 20px; /* Some padding */
 }
-
+.team_container .content h1{
+    font-size: calc(var(--sizeindex) * 1.8);
+}
+.team_container .content p{
+    font-size: calc(var(--sizeindex) * 0.95);
+}
 .member_content{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 4fr;
     width: var(--container-width-lg);
     gap: 2rem;
+
+    opacity: 0;
+    transform: translateY(20px);
     /*display: flex;
     flex-direction: row;
     gap: 2rem;
     margin-bottom: 50px;*/
 }
+.member_content.element_show{
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+}
+
+
 .member_content.right{
     grid-template-columns: 4fr 2fr;
 }
@@ -867,24 +891,26 @@ section{
     }
 
     /*launch_section*/
-    .launch_section_left{
-        height: 50vh;
-    }
+  .launch_section_left .content{
+      display: block;
+  }
 
-    .launch_section_right{
-        height: 50vh;
-    }
+    /*.launch_section_right{
+        height: 500px;
+    }*/
+
 
     /*gallery*/
     .description{
         left: 5%;
         top: 6rem;
+        height: auto;
         position: relative;
         max-width: 90%;
 
     }
     .slider{
-        top: 12vh;
+        top: 13vh;
     }
     .slider__item{
         max-height: 57vh;
@@ -933,6 +959,30 @@ section{
     left: 5vw;
     }
 
+.launch_section_container{
+        grid-template-columns: 1fr;
+    }
+
+    .launch_section_right{
+
+        height: 100%;
+    }
+
+    .about_item img{
+    height: 30vh;
+    }
+
+    .team_container .content {
+    position: relative; /* Position the background text */
+}
+
+    .team_container img {
+    height: calc(70vh - 5rem);
+}
+    .team_container .content {
+    height: 30vh;
+}
+
 }
 
 
@@ -979,6 +1029,11 @@ section{
     }
     .slider_main{
     left: 0;
+    }
+
+
+    .launch_section_right{
+        height: 100%;
     }
 
 /*team*/
@@ -1045,4 +1100,20 @@ section{
     border: 2px solid #e84c3d;
     border-radius: 10px;
     }
+.team_container .content {
+    padding: 10px;
+    position: relative; /* Position the background text */
+}
+
+.swiper-wrapper{
+        height: 54%;
+    }
+
+
+.team_container .content h1{
+    font-size: calc(var(--sizeindex) * 2.1);
+}
+.team_container .content p{
+    font-size: calc(var(--sizeindex) * 1.2);
+}
 }

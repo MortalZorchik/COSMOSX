@@ -12,6 +12,12 @@
 	<link rel="stylesheet" href="{% static 'libs/swiper/swiper-bundle.min.css' %}">
 
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 	<title>Document</title>
@@ -49,7 +55,7 @@
 		<div class="swiper-wrapper slier__wrapper">
             {% for img in images %}
 			<div class="swiper-slide slider__item">
-				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url({{ img.image.url }});"></div>
+                <a data-fancybox="gallery" href="{{ img.image.url }}"><div class="slider__img" data-swiper-parallax="20%" style="background-image: url({{ img.image.url }});"></div></a>
 			</div>
             {% endfor %}
 
